@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>CSS pseudo selectors | directory tree</title>
+    <style>
+body{
+    background-color: #333;
+}
+.tree{
+list-style-type:"┠" ;
+font-size: 64px;
+}
+    .folder{
+color: white;
+/*border: 1px solid red;*/
+
+padding: 24px 0px 24px 72px;
+background-image: url(img/Oxygen-Icons.org-Oxygen-Actions-document-open.64.png);
+background-repeat: no-repeat;
+line-height: 8px;
+}  
+    .folder:last-child{
+        list-style-type: "┖";
+    }
+    .name{
+        font-size: 18px;
+    }  
+    .empty{
+        background-image: url(img/Oxygen-Icons.org-Oxygen-Actions-document-open-folder.64.png);
+    }
+    .file{
+        transform: translateY(30px);
+    }
+    .file:hover{
+color: white;
+/*border: 1px solid red;*/
+
+padding: 24px 0px 24px 72px;
+background-image: url(img/Oxygen-Icons.org-Oxygen-Actions-document-properties.64.png);
+background-repeat: no-repeat;
+line-height: 19px;
+} 
+.file:last-child{
+        list-style-type: "┖";
+}
+.name:hover{
+    border: 1px solid white;
+    background-color: gray;
+    line-height: 18px;
+}
+
+    </style>
+</head>
+<body>
+    <ul class="tree">
+        <li class="folder">
+            <div class="name">PROJECT [DONE]</div>
+            <ul class="tree">
+                <li class="file">
+                     <div class="name">File 1</div>
+                    </li>
+                <li class="file">
+                     <div class="name">File 2</div>
+                    </li>
+            </ul>
+        </li>
+        <li class="folder">
+            <div class="name">PROJECT [NOW]</div>
+        </li>
+        <li class="folder empty">
+            <div class="name">PROJECT [TBD]</div>
+        </li>
+    </ul>
+</body>
+</html>
